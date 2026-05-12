@@ -37,7 +37,9 @@ function Projects() {
             hover:border-sky-400/30
             hover:shadow-[0_0_40px_rgba(56,189,248,0.2)]
             transition-all
+            ease-in-out
             duration-500
+            cursor-pointer
             "
           >
 
@@ -110,11 +112,14 @@ function Projects() {
                 {project.desc}
               </p>
 
-              {/* BUTTON */}
+              {/* GITHUB BUTTON */}
 
               <div className="flex gap-5 mt-10">
 
-                <button
+                <a
+                  href={project.github}
+                  target="_blank"
+                  rel="noreferrer"
                   className="
                   flex items-center gap-3
                   bg-gradient-to-r
@@ -124,13 +129,15 @@ function Projects() {
                   rounded-2xl
                   font-semibold
                   hover:scale-105
+                  hover:shadow-[0_0_25px_rgba(56,189,248,0.5)]
                   transition
                   duration-300
+                  w-fit
                   "
                 >
                   <FaGithub />
                   GitHub
-                </button>
+                </a>
 
               </div>
 
