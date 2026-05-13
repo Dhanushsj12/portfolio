@@ -6,7 +6,7 @@ import {
   FaEnvelope
 } from "react-icons/fa";
 
-import profile from "../assets/profile.jpeg";
+import profile from "../assets/profile.png";
 
 function Hero() {
 
