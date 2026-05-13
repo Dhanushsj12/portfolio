@@ -6,11 +6,10 @@ import {
   FaEnvelope
 } from "react-icons/fa";
 
-<img src="/newprofile.png" alt="profile" />
-
 function Hero() {
 
   return (
+
     <section className="min-h-screen flex items-center justify-center px-6 bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950 overflow-hidden">
 
       <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-20 items-center">
@@ -72,35 +71,14 @@ function Hero() {
 
             <a
               href="#projects"
-              className="
-              bg-gradient-to-r
-              from-sky-500
-              to-purple-600
-              px-10 py-4
-              rounded-2xl
-              text-lg
-              font-semibold
-              hover:scale-110
-              transition
-              duration-300
-              shadow-[0_0_30px_rgba(56,189,248,0.4)]
-              "
+              className="bg-gradient-to-r from-sky-500 to-purple-600 px-10 py-4 rounded-2xl text-lg font-semibold hover:scale-110 transition duration-300 shadow-[0_0_30px_rgba(56,189,248,0.4)]"
             >
               Explore Projects
             </a>
 
             <a
               href="#contact"
-              className="
-              border border-slate-600
-              px-10 py-4
-              rounded-2xl
-              text-lg
-              font-semibold
-              hover:bg-slate-800
-              transition
-              duration-300
-              "
+              className="border border-slate-600 px-10 py-4 rounded-2xl text-lg font-semibold hover:bg-slate-800 transition duration-300"
             >
               Contact Me
             </a>
@@ -111,45 +89,16 @@ function Hero() {
 
           <div className="flex gap-8 text-4xl mt-12">
 
-            <a
-              href="https://github.com/Dhanushsj12"
-              target="_blank"
-              className="
-              text-gray-300
-              hover:text-sky-400
-              hover:scale-125
-              transition
-              duration-300
-              "
-            >
-              <FaGithub />
+            <a href="https://github.com/Dhanushsj12" target="_blank">
+              <FaGithub className="text-gray-300 hover:text-sky-400 hover:scale-125 transition duration-300"/>
             </a>
 
-            <a
-              href="https://linkedin.com"
-              target="_blank"
-              className="
-              text-gray-300
-              hover:text-blue-500
-              hover:scale-125
-              transition
-              duration-300
-              "
-            >
-              <FaLinkedin />
+            <a href="https://linkedin.com" target="_blank">
+              <FaLinkedin className="text-gray-300 hover:text-blue-500 hover:scale-125 transition duration-300"/>
             </a>
 
-            <a
-              href="mailto:dhanushsj2004@gmail.com"
-              className="
-              text-gray-300
-              hover:text-red-400
-              hover:scale-125
-              transition
-              duration-300
-              "
-            >
-              <FaEnvelope />
+            <a href="mailto:dhanushsj2004@gmail.com">
+              <FaEnvelope className="text-gray-300 hover:text-red-400 hover:scale-125 transition duration-300"/>
             </a>
 
           </div>
@@ -158,55 +107,20 @@ function Hero() {
 
         {/* RIGHT SIDE */}
 
-        <div
-          className="flex justify-center"
-          data-aos="fade-left"
-        >
+        <div className="flex justify-center" data-aos="fade-left">
 
-          <div
-            className="
-            relative
-            group
-            "
-          >
+          <div className="relative group">
 
-            {/* GLOW EFFECT */}
+            {/* GLOW */}
 
-            <div
-              className="
-              absolute
-              inset-0
-              rounded-full
-              bg-gradient-to-r
-              from-sky-500
-              to-purple-600
-              blur-3xl
-              opacity-30
-              group-hover:opacity-50
-              transition
-              duration-500
-              "
-            />
+            <div className="absolute inset-0 rounded-full bg-gradient-to-r from-sky-500 to-purple-600 blur-3xl opacity-30 group-hover:opacity-50 transition duration-500"/>
 
             {/* IMAGE */}
 
             <img
-              src={profile}
+              src="/newprofile.png"
               alt="profile"
-              className="
-              relative
-              w-[320px]
-              h-[320px]
-              md:w-[380px]
-              md:h-[380px]
-              object-cover
-              rounded-full
-              border-4 border-sky-500/40
-              shadow-[0_0_40px_rgba(56,189,248,0.3)]
-              hover:scale-105
-              transition
-              duration-500
-              "
+              className="relative w-[320px] h-[320px] md:w-[380px] md:h-[380px] object-cover rounded-full border-4 border-sky-500/40 shadow-[0_0_40px_rgba(56,189,248,0.3)] hover:scale-105 transition duration-500"
             />
 
           </div>
@@ -216,6 +130,7 @@ function Hero() {
       </div>
 
     </section>
+
   );
 }
 
