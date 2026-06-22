@@ -104,7 +104,7 @@ function Education() {
                   text-sky-300
                   "
                 >
-                  CGPA : 8.15
+                  CGPA : 8.13
                 </span>
 
                 <span

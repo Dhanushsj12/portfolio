@@ -14,10 +14,13 @@ function About() {
       <div className="max-w-5xl mx-auto text-lg text-gray-300 leading-9">
 
         <p>
-          Highly motivated Software Engineering student with
-          experience in full-stack development,
-          REST APIs, machine learning,
-          and real-time backend systems.
+          Software Engineering student specializing in Generative AI,
+Prompt Engineering, Intelligent Automation, Backend Systems,
+and AI-powered applications.
+
+Experienced in building LLM-based solutions using Gemini,
+multimodal AI systems, REST APIs, machine learning models,
+and real-time event-driven architectures.
         </p>
 
       </div>

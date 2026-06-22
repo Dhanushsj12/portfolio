@@ -10,7 +10,7 @@ function Hero() {
 
   return (
 
-    <section className="min-h-screen flex items-center justify-center px-6 bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950 overflow-hidden">
+    <section className="min-h-screen flex items-center justify-center px-6 pt-24 bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950 overflow-hidden">
 
       <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-20 items-center">
 
@@ -52,7 +52,7 @@ function Hero() {
             transition={{ delay:0.5 }}
             className="text-2xl text-gray-300 leading-10 max-w-2xl"
           >
-           Software Engineering Student | Full Stack Developer | AI & Backend Enthusiast
+           Software Engineering Student | Full Stack Developer | AI & Backend Enthusiast  | Prompt Engineer | GenAI Developer
           </motion.p>
 
           <motion.p
@@ -61,13 +61,17 @@ function Hero() {
             transition={{ delay:0.8 }}
             className="text-gray-400 mt-8 text-lg leading-9 max-w-2xl"
           >
-            Passionate about building scalable backend systems,
-            intelligent AI applications, and modern web experiences.
-          </motion.p>
+            Passionate about building AI-powered applications,
+LLM workflows, intelligent automation systems,
+multimodal AI solutions, and scalable backend architectures.
+</motion.p>
 
           {/* BUTTONS */}
 
           <div className="flex gap-6 mt-12 flex-wrap">
+            
+
+
 
             <a
               href="#projects"
@@ -93,7 +97,7 @@ function Hero() {
               <FaGithub className="text-gray-300 hover:text-sky-400 hover:scale-125 transition duration-300"/>
             </a>
 
-            <a href="https://linkedin.com" target="_blank">
+            <a href="https://www.linkedin.com/in/dhanush-s-j-034147271" target="_blank">
               <FaLinkedin className="text-gray-300 hover:text-blue-500 hover:scale-125 transition duration-300"/>
             </a>
 
