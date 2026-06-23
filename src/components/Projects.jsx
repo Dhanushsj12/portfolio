@@ -1,3 +1,5 @@
+import { useState, useEffect } from "react";
+
 import projects from "../data/projects";
 
 import {
@@ -5,6 +7,22 @@ import {
 } from "react-icons/fa";
 
 function Projects() {
+
+  const [activeProject, setActiveProject] = useState(0);
+
+  useEffect(() => {
+
+    const interval = setInterval(() => {
+
+      setActiveProject((prev) =>
+        (prev + 1) % projects.length
+      );
+
+    }, 3000);
+
+    return () => clearInterval(interval);
+
+  }, []);
 
   return (
 
@@ -106,15 +124,35 @@ function Projects() {
 
               </div>
 
-              {/* DESCRIPTION */}
+              {/* DESCRIPTION / IMAGE SWITCH */}
 
-              <p className="text-gray-300 leading-8 text-lg">
-                {project.desc}
-              </p>
+              {activeProject === index ? (
+
+                <img
+  src={project.image}
+  alt={project.title}
+  className="
+  w-full
+  h-72
+  object-contain
+  rounded-2xl
+  mb-4
+  transition-all
+  duration-500
+  "
+/>
+
+              ) : (
+
+                <p className="text-gray-300 leading-8 text-lg">
+                  {project.desc}
+                </p>
+
+              )}
 
               {/* GITHUB BUTTON */}
 
-              <div className="flex gap-5 mt-10">
+              <div className="flex gap-5 mt-8">
 
                 <a
                   href={project.github}
@@ -150,6 +188,7 @@ function Projects() {
       </div>
 
     </section>
+
   );
 }
 
