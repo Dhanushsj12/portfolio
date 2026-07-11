@@ -7,19 +7,22 @@ import Education from "./components/Education";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 import Quote from "./components/Quote";
-
+import Experience from "./components/Experience";
+import Certifications from "./components/Certifications.jsx";
 function App() {
   return (
     <>
       <Navbar />
-      <Hero />
-      <Quote />
-      <About />
-      <Skills />
-      <Projects />
-      <Education />
-      <Contact />
-      <Footer />
+<Hero />
+<About />
+<Skills />
+<Experience />
+<Projects />
+<Quote />
+<Certifications />
+<Education />
+<Contact />
+<Footer />
     </>
   );
 }

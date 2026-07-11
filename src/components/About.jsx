@@ -15,7 +15,7 @@ function About() {
 
         <p>
           Software Engineering student specializing in Generative AI,
-Prompt Engineering, Intelligent Automation, Backend Systems,
+Machine Learning, Intelligent Automation, Backend Systems,
 and AI-powered applications.
 
 Experienced in building LLM-based solutions using Gemini,

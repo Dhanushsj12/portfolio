@@ -52,7 +52,7 @@ function Hero() {
             transition={{ delay:0.5 }}
             className="text-2xl text-gray-300 leading-10 max-w-2xl"
           >
-           Software Engineering Student | Full Stack Developer | AI & Backend Enthusiast  | Prompt Engineer | GenAI Developer
+           Software Engineering Student | Full Stack Developer | AI & Backend Enthusiast  | Azure | GenAI Developer
           </motion.p>
 
           <motion.p

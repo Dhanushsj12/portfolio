@@ -2,9 +2,9 @@ import {
   FaReact,
   FaPython,
   FaDocker,
-  FaAws,
   FaNodeJs,
   FaJs,
+  FaMicrosoft
 } from "react-icons/fa";
 
 import {
@@ -17,52 +17,52 @@ function Skills() {
   const skills = [
 
     {
-      name:"JavaScript",
-      icon:<FaJs />,
-      color:"hover:text-yellow-400"
+      name: "JavaScript",
+      icon: <FaJs />,
+      color: "hover:text-yellow-400"
     },
 
     {
-      name:"Python",
-      icon:<FaPython />,
-      color:"hover:text-blue-400"
+      name: "Python",
+      icon: <FaPython />,
+      color: "hover:text-blue-400"
     },
 
     {
-      name:"ReactJS",
-      icon:<FaReact />,
-      color:"hover:text-cyan-400"
+      name: "ReactJS",
+      icon: <FaReact />,
+      color: "hover:text-cyan-400"
     },
 
     {
-      name:"Node.js",
-      icon:<FaNodeJs />,
-      color:"hover:text-green-400"
+      name: "Node.js",
+      icon: <FaNodeJs />,
+      color: "hover:text-green-400"
     },
 
     {
-      name:"Flask",
-      icon:<SiFlask />,
-      color:"hover:text-gray-300"
+      name: "Flask",
+      icon: <SiFlask />,
+      color: "hover:text-gray-300"
     },
 
     {
-      name:"MongoDB",
-      icon:<SiMongodb />,
-      color:"hover:text-green-500"
+      name: "MongoDB",
+      icon: <SiMongodb />,
+      color: "hover:text-green-500"
     },
 
     {
-      name:"Docker",
-      icon:<FaDocker />,
-      color:"hover:text-sky-400"
+      name: "Docker",
+      icon: <FaDocker />,
+      color: "hover:text-sky-400"
     },
 
     {
-      name:"AWS",
-      icon:<FaAws />,
-      color:"hover:text-orange-400"
-    },
+      name: "Microsoft Azure",
+      icon: <FaMicrosoft />,
+      color: "hover:text-blue-500"
+    }
 
   ];
 
@@ -80,7 +80,7 @@ function Skills() {
 
       <div className="max-w-6xl mx-auto grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 mt-20 justify-items-center">
 
-        {skills.map((skill,index)=>(
+        {skills.map((skill, index) => (
 
           <div
             key={index}
@@ -108,8 +108,6 @@ function Skills() {
             "
           >
 
-            {/* GLOW */}
-
             <div
               className="
               absolute
@@ -125,8 +123,6 @@ function Skills() {
               "
             />
 
-            {/* ICON */}
-
             <div
               className={`
               text-6xl
@@ -140,8 +136,6 @@ function Skills() {
               {skill.icon}
             </div>
 
-            {/* TEXT */}
-
             <h3 className="text-xl font-semibold text-center">
               {skill.name}
             </h3>
@@ -153,6 +147,7 @@ function Skills() {
       </div>
 
     </section>
+
   );
 }
 
