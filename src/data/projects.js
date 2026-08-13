@@ -25,6 +25,14 @@ github:"https://github.com/Dhanushsj12/ai_resume_analyzer"
 },
 
 {
+title:"Explainable AI for Heart Disease Prediction",
+image:"/projects/10.png",
+tech:"Python, Scikit-Learn, SHAP, LIME, Machine Learning, Flask",
+desc:"Developed an explainable machine learning system for heart disease prediction using clinical data. Integrated SHAP and LIME to interpret model predictions, identify influential features, and provide transparent explanations for individual patient-level predictions.",
+github:"https://github.com/Dhanushsj12/Explainable-AI-Clinical-Decision-Support-System"
+},
+
+{
 title:"AI Voice Assistant with Multilingual NLG/NLU Support",
 image:"/projects/3.png",
 tech:"Python, Gemini 1.5 Flash, SpeechRecognition, pyttsx3",
