@@ -9,6 +9,14 @@ github:"https://github.com/Dhanushsj12/Azure-Document-Management-System"
 },
 
 {
+  title: "OrbitDesk AI Support Agent",
+  image: "/projects/10.png",
+  tech: "Python, Streamlit, LangGraph, FAISS, Sentence Transformers, Hugging Face Transformers, PyTorch, RAG",
+  desc: "Built an AI-powered support assistant using a Retrieval-Augmented Generation pipeline with LangGraph workflow orchestration. Retrieves relevant knowledge through FAISS semantic search, generates responses using a local Hugging Face model, verifies answers against retrieved sources, and supports answerable, clarification, escalation, and out-of-scope workflows with normal and JSON response views.",
+  github: "https://github.com/Dhanushsj12/orbitdesk-support-agent"
+},
+
+{
 title:"AI Resume Analyzer and ATS Job Matcher",
 image:"/projects/2.png",
 tech:"Python, Flask, Gemini 2.5 Flash, PyPDF2, Tailwind CSS",
