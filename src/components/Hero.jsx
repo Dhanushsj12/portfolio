@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-
+import MeteorField from "./MeteorField";
 import {
   FaGithub,
   FaLinkedin,
@@ -7,33 +7,33 @@ import {
 } from "react-icons/fa";
 
 function Hero() {
-
   return (
+    <section className="relative min-h-screen flex items-center justify-center px-6 pt-24 bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950 overflow-hidden">
 
-    <section className="min-h-screen flex items-center justify-center px-6 pt-24 bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950 overflow-hidden">
+      <MeteorField meteorCount={16} starCount={60} />
 
-      <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-20 items-center">
+      <div className="relative z-10 max-w-7xl mx-auto grid md:grid-cols-2 gap-20 items-center">
 
         {/* LEFT SIDE */}
-
         <div data-aos="fade-right">
 
+          {/* Welcome */}
           <motion.p
-            initial={{ opacity:0 }}
-            animate={{ opacity:1 }}
-            transition={{ duration:1 }}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 1 }}
             className="text-sky-400 text-xl mb-4 font-semibold tracking-widest uppercase"
           >
             Welcome To My Portfolio
           </motion.p>
 
+          {/* NAME */}
           <motion.h1
-            initial={{ opacity:0, y:-40 }}
-            animate={{ opacity:1, y:0 }}
-            transition={{ duration:1 }}
-            className="text-7xl md:text-8xl font-extrabold leading-tight mb-6"
+            initial={{ opacity: 0, y: -40 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1 }}
+            className="text-6xl md:text-7xl font-extrabold leading-tight mb-6"
           >
-
             <span className="bg-gradient-to-r from-sky-400 to-purple-500 bg-clip-text text-transparent">
               Dhanush
             </span>
@@ -43,35 +43,33 @@ function Hero() {
             <span className="text-white">
               S J
             </span>
-
           </motion.h1>
 
+          {/* ROLE */}
           <motion.p
-            initial={{ opacity:0 }}
-            animate={{ opacity:1 }}
-            transition={{ delay:0.5 }}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 0.5 }}
             className="text-2xl text-gray-300 leading-10 max-w-2xl"
           >
-           Software Engineering Student | Full Stack Developer | AI & Backend Enthusiast  | Azure | GenAI Developer
+            Software Engineering Student | Full Stack Developer | AI & Backend
+            Enthusiast | Azure | GenAI Developer
           </motion.p>
 
+          {/* DESCRIPTION */}
           <motion.p
-            initial={{ opacity:0 }}
-            animate={{ opacity:1 }}
-            transition={{ delay:0.8 }}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 0.8 }}
             className="text-gray-400 mt-8 text-lg leading-9 max-w-2xl"
           >
             Passionate about building AI-powered applications,
-LLM workflows, intelligent automation systems,
-multimodal AI solutions, and scalable backend architectures.
-</motion.p>
+            LLM workflows, intelligent automation systems,
+            multimodal AI solutions, and scalable backend architectures.
+          </motion.p>
 
           {/* BUTTONS */}
-
           <div className="flex gap-6 mt-12 flex-wrap">
-            
-
-
 
             <a
               href="#projects"
@@ -90,37 +88,55 @@ multimodal AI solutions, and scalable backend architectures.
           </div>
 
           {/* SOCIAL ICONS */}
+          <div className="flex gap-8 text-4xl mt-12 mb-10">
 
-          <div className="flex gap-8 text-4xl mt-12">
-
-            <a href="https://github.com/Dhanushsj12" target="_blank">
-              <FaGithub className="text-gray-300 hover:text-sky-400 hover:scale-125 transition duration-300"/>
+            {/* GitHub */}
+            <a
+              href="https://github.com/Dhanushsj12"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <FaGithub
+                className="text-gray-300 hover:text-sky-400 hover:scale-125 transition duration-300"
+              />
             </a>
 
-            <a href="https://www.linkedin.com/in/dhanush-s-j-034147271" target="_blank">
-              <FaLinkedin className="text-gray-300 hover:text-blue-500 hover:scale-125 transition duration-300"/>
+            {/* LinkedIn */}
+            <a
+              href="https://www.linkedin.com/in/dhanush-s-j-034147271"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <FaLinkedin
+                className="text-gray-300 hover:text-blue-500 hover:scale-125 transition duration-300"
+              />
             </a>
 
-            <a href="mailto:dhanushsj2004@gmail.com">
-              <FaEnvelope className="text-gray-300 hover:text-red-400 hover:scale-125 transition duration-300"/>
+            {/* Email */}
+            <a
+              href="mailto:dhanushsj2004@gmail.com"
+            >
+              <FaEnvelope
+                className="text-gray-300 hover:text-red-400 hover:scale-125 transition duration-300"
+              />
             </a>
 
           </div>
 
         </div>
 
-        {/* RIGHT SIDE */}
-
-        <div className="flex justify-center" data-aos="fade-left">
+        {/* RIGHT SIDE - PROFILE */}
+        <div
+          className="flex justify-center"
+          data-aos="fade-left"
+        >
 
           <div className="relative group">
 
-            {/* GLOW */}
+            {/* Profile Glow */}
+            <div className="absolute inset-0 rounded-full bg-gradient-to-r from-sky-500 to-purple-600 blur-3xl opacity-30 group-hover:opacity-50 transition duration-500" />
 
-            <div className="absolute inset-0 rounded-full bg-gradient-to-r from-sky-500 to-purple-600 blur-3xl opacity-30 group-hover:opacity-50 transition duration-500"/>
-
-            {/* IMAGE */}
-
+            {/* Profile Image */}
             <img
               src="/newprofile.png"
               alt="profile"
@@ -134,7 +150,6 @@ multimodal AI solutions, and scalable backend architectures.
       </div>
 
     </section>
-
   );
 }
 

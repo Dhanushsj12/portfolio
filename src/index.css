@@ -2,52 +2,554 @@
 @tailwind components;
 @tailwind utilities;
 
-html{
-  scroll-behavior:smooth;
+
+/* =========================================================
+   GLOBAL
+========================================================= */
+
+html {
+  scroll-behavior: smooth;
 }
 
-body{
-  margin:0;
-  padding:0;
-  min-height:100vh;
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
 
   background:
-  radial-gradient(circle at top left, #0ea5e9 0%, transparent 25%),
-  radial-gradient(circle at bottom right, #7c3aed 0%, transparent 25%),
-  #020617;
+    radial-gradient(
+      circle at top left,
+      #0ea5e9 0%,
+      transparent 25%
+    ),
+    radial-gradient(
+      circle at bottom right,
+      #7c3aed 0%,
+      transparent 25%
+    ),
+    #020617;
 
-  color:white;
+  color: white;
 
-  font-family:Inter, Arial, sans-serif;
+  font-family: Inter, Arial, sans-serif;
 
-  overflow-x:hidden;
+  overflow-x: hidden;
+
+  transition:
+    background 0.4s ease,
+    color 0.4s ease;
 }
 
-/* SCROLLBAR */
 
-::-webkit-scrollbar{
-  width:10px;
+/* =========================================================
+   SCROLLBAR
+========================================================= */
+
+::-webkit-scrollbar {
+  width: 10px;
 }
 
-::-webkit-scrollbar-track{
-  background:#020617;
+::-webkit-scrollbar-track {
+  background: #020617;
 }
 
-::-webkit-scrollbar-thumb{
-  background:linear-gradient(#0ea5e9,#7c3aed);
-  border-radius:10px;
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(
+    #0ea5e9,
+    #7c3aed
+  );
+
+  border-radius: 10px;
 }
 
-/* SECTION TITLE */
 
-.section-title{
+/* =========================================================
+   SECTION TITLE
+========================================================= */
+
+.section-title {
   @apply text-5xl font-bold text-center mb-16;
 }
 
-/* GRADIENT TEXT */
 
-.gradient-text{
-  background:linear-gradient(to right,#38bdf8,#8b5cf6);
-  -webkit-background-clip:text;
-  -webkit-text-fill-color:transparent;
+/* =========================================================
+   GRADIENT TEXT
+========================================================= */
+
+.gradient-text {
+  background: linear-gradient(
+    to right,
+    #38bdf8,
+    #8b5cf6
+  );
+
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+
+/* =========================================================
+   STAR FIELD
+========================================================= */
+
+.star-field {
+  position: absolute;
+
+  inset: 0;
+
+  overflow: hidden;
+
+  pointer-events: none;
+
+  z-index: 0;
+}
+
+
+/* =========================================================
+   NORMAL STARS
+========================================================= */
+
+.star {
+  position: absolute;
+
+  width: 2px;
+  height: 2px;
+
+  background: white;
+
+  border-radius: 999px;
+
+  animation: twinkle linear infinite;
+}
+
+
+/* Star animation */
+
+@keyframes twinkle {
+
+  0%,
+  100% {
+    opacity: 0.15;
+  }
+
+  50% {
+    opacity: 0.9;
+  }
+
+}
+
+
+/* =========================================================
+   METEORS
+========================================================= */
+
+.meteor {
+  position: absolute;
+
+  top: -10%;
+
+  width: 1px;
+
+  /*
+    Long meteor tail
+  */
+
+  background: linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, 0),
+    rgba(255, 255, 255, 0.6),
+    white
+  );
+
+  border-radius: 999px;
+
+  transform: rotate(145deg);
+
+  animation-name: meteor-fall;
+
+  animation-timing-function:
+    cubic-bezier(
+      0.25,
+      0.1,
+      0.25,
+      1
+    );
+
+  animation-iteration-count: infinite;
+
+  opacity: 0;
+
+  box-shadow:
+    0 0 6px 1px
+    rgba(255, 255, 255, 0.4);
+}
+
+
+/* =========================================================
+   METEOR ANIMATION
+========================================================= */
+
+@keyframes meteor-fall {
+
+  0% {
+
+    transform:
+      translate(0, 0)
+      rotate(145deg);
+
+    opacity: 0;
+  }
+
+  6% {
+
+    opacity: 1;
+  }
+
+  75% {
+
+    opacity: 1;
+  }
+
+  100% {
+
+    transform:
+      translate(60vw, 78vh)
+      rotate(145deg);
+
+    opacity: 0;
+  }
+
+}
+
+
+/* =========================================================
+   REDUCED MOTION
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+  .meteor,
+  .star {
+
+    animation: none;
+
+    opacity: 0.3;
+  }
+
+}
+
+
+/* =========================================================
+   LIGHT THEME
+========================================================= */
+
+.light body {
+
+  background:
+    radial-gradient(
+      circle at top left,
+      #bae6fd 0%,
+      transparent 30%
+    ),
+    radial-gradient(
+      circle at bottom right,
+      #ddd6fe 0%,
+      transparent 30%
+    ),
+    linear-gradient(
+      180deg,
+      #e0f2fe 0%,
+      #ffffff 45%,
+      #e0f2fe 100%
+    ) !important;
+
+  color: #0f172a !important;
+}
+
+
+/* =========================================================
+   LIGHT SCROLLBAR
+========================================================= */
+
+.light ::-webkit-scrollbar-track {
+
+  background: #e0f2fe;
+}
+
+.light ::-webkit-scrollbar-thumb {
+
+  background: linear-gradient(
+    #0ea5e9,
+    #7dd3fc
+  );
+}
+
+
+/* LIGHT MODE STARS */
+
+.light .star {
+  background: #38bdf8;
+
+  box-shadow:
+    0 0 5px
+    rgba(56, 189, 248, 0.55);
+}
+/* LIGHT MODE METEORS */
+
+.light .meteor {
+  background: linear-gradient(
+    to bottom,
+    rgba(14, 165, 233, 0),
+    rgba(14, 165, 233, 0.45),
+    rgba(2, 132, 199, 0.9)
+  );
+
+  box-shadow:
+    0 0 7px 1px
+    rgba(14, 165, 233, 0.45);
+}
+
+
+
+/* =========================================================
+   LIGHT TEXT COLORS
+========================================================= */
+
+.light .text-white {
+
+  color: #0f172a !important;
+}
+
+.light .text-gray-300 {
+
+  color: #334155 !important;
+}
+
+.light .text-gray-400 {
+
+  color: #475569 !important;
+}
+
+.light .text-sky-300 {
+
+  color: #0284c7 !important;
+}
+
+.light .text-sky-400 {
+
+  color: #0284c7 !important;
+}
+
+.light .text-purple-300 {
+
+  color: #7c3aed !important;
+}
+
+
+/* =========================================================
+   LIGHT NAVBAR
+========================================================= */
+
+.light .bg-slate-900\/70 {
+
+  background:
+    rgba(255, 255, 255, 0.78)
+    !important;
+
+  backdrop-filter: blur(16px);
+}
+
+.light .border-slate-800 {
+
+  border-color: #bae6fd !important;
+}
+
+
+/* =========================================================
+   LIGHT BACKGROUNDS
+========================================================= */
+
+.light .bg-slate-950 {
+
+  background: #f0f9ff !important;
+}
+
+.light .border-slate-600 {
+
+  border-color: #7dd3fc !important;
+}
+
+.light .hover\:bg-slate-800:hover {
+
+  background: #e0f2fe !important;
+}
+
+
+/* =========================================================
+   LIGHT HERO BACKGROUND
+========================================================= */
+
+.light
+.bg-gradient-to-b.from-slate-950.via-slate-900.to-slate-950 {
+
+  background:
+    linear-gradient(
+      180deg,
+      #ffffff 0%,
+      #e0f2fe 50%,
+      #ffffff 100%
+    ) !important;
+}
+
+
+/* =========================================================
+   LIGHT GLASS CARDS
+========================================================= */
+
+.light .bg-white\/5 {
+
+  background:
+    rgba(14, 165, 233, 0.06)
+    !important;
+}
+
+.light .bg-white\/10 {
+
+  background:
+    rgba(14, 165, 233, 0.10)
+    !important;
+}
+
+.light .border-white\/10 {
+
+  border-color:
+    rgba(14, 165, 233, 0.25)
+    !important;
+}
+
+
+/* =========================================================
+   LIGHT SKY BORDERS
+========================================================= */
+
+.light .border-sky-400\/20 {
+
+  border-color:
+    rgba(2, 132, 199, 0.35)
+    !important;
+}
+
+.light .border-sky-400\/30 {
+
+  border-color:
+    rgba(2, 132, 199, 0.45)
+    !important;
+}
+
+.light .border-sky-400\/40 {
+
+  border-color:
+    rgba(2, 132, 199, 0.5)
+    !important;
+}
+
+
+/* =========================================================
+   LIGHT PURPLE BORDERS
+========================================================= */
+
+.light .border-purple-400\/20 {
+
+  border-color:
+    rgba(124, 58, 237, 0.35)
+    !important;
+}
+
+
+/* =========================================================
+   LIGHT CARD BACKGROUNDS
+========================================================= */
+
+.light .bg-sky-500\/10 {
+
+  background:
+    rgba(2, 132, 199, 0.08)
+    !important;
+}
+
+.light .bg-purple-500\/10 {
+
+  background:
+    rgba(124, 58, 237, 0.08)
+    !important;
+}
+
+
+/* =========================================================
+   LIGHT MODE METEOR VISIBILITY
+========================================================= */
+
+/*
+  Explicitly keep the field visible.
+*/
+
+.light .star-field {
+
+  display: block !important;
+}
+
+
+/* =========================================================
+   LIGHT MODE METEOR LAYERS
+========================================================= */
+
+.light .star-field .meteor {
+
+  opacity: 0;
+
+}
+
+
+/* =========================================================
+   LIGHT MODE HOVER
+========================================================= */
+
+.light .hover\:text-sky-400:hover {
+
+  color: #0284c7 !important;
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 768px) {
+
+  .meteor {
+
+    width: 1px;
+
+  }
+
+  .star {
+
+    width: 1.5px;
+    height: 1.5px;
+
+  }
+
+}
+
+/* =========================================================
+   QUOTE TEXT - LIGHT MODE FIX
+========================================================= */
+
+.light .quote-text {
+  color: #0f172a !important;
+}
+
+/* If the quote is using Tailwind text-gray-200 directly */
+.light .text-gray-200 {
+  color: #0f172a !important;
 }

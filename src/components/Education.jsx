@@ -2,122 +2,132 @@ import {
   FaGraduationCap
 } from "react-icons/fa";
 
+import MeteorField from "./MeteorField";
+
 function Education() {
-
   return (
-
     <section
       id="education"
-      className="py-32 px-6"
+      className="relative py-32 px-6 overflow-hidden"
       data-aos="fade-up"
     >
 
-      <h2 className="section-title gradient-text">
-        Education
-      </h2>
+      {/* Falling stars / meteors */}
+      <MeteorField
+        meteorCount={12}
+        starCount={40}
+      />
 
-      <div className="max-w-5xl mx-auto mt-20">
+      <div className="relative z-10">
 
-        {/* EDUCATION CARD */}
+        {/* Section Title */}
+        <h2 className="section-title gradient-text">
+          Education
+        </h2>
 
-        <div
-          className="
-          group
-          relative
-          overflow-hidden
-          bg-white/5
-          backdrop-blur-xl
-          border border-white/10
-          rounded-3xl
-          p-10
-          hover:-translate-y-3
-          hover:border-sky-400/30
-          hover:shadow-[0_0_40px_rgba(56,189,248,0.2)]
-          transition-all
-          duration-500
-          "
-        >
+        <div className="max-w-5xl mx-auto mt-20">
 
-          {/* GLOW EFFECT */}
-
+          {/* EDUCATION CARD */}
           <div
             className="
-            absolute
-            inset-0
-            bg-gradient-to-r
-            from-sky-500/10
-            to-purple-500/10
-            opacity-0
-            group-hover:opacity-100
-            transition
-            duration-500
+              group
+              relative
+              overflow-hidden
+              bg-white/5
+              backdrop-blur-xl
+              border border-white/10
+              rounded-3xl
+              p-10
+              hover:-translate-y-3
+              hover:border-sky-400/30
+              hover:shadow-[0_0_40px_rgba(56,189,248,0.2)]
+              transition-all
+              duration-500
             "
-          />
+          >
 
-          {/* CONTENT */}
-
-          <div className="relative z-10 flex flex-col md:flex-row gap-8 items-start">
-
-            {/* ICON */}
-
+            {/* GLOW EFFECT */}
             <div
               className="
-              text-6xl
-              text-sky-400
-              bg-sky-500/10
-              p-6
-              rounded-2xl
-              border border-sky-400/20
+                absolute
+                inset-0
+                bg-gradient-to-r
+                from-sky-500/10
+                to-purple-500/10
+                opacity-0
+                group-hover:opacity-100
+                transition
+                duration-500
               "
-            >
-              <FaGraduationCap />
-            </div>
+            />
 
-            {/* DETAILS */}
+            {/* CONTENT */}
+            <div className="relative z-10 flex flex-col md:flex-row gap-8 items-start">
 
-            <div className="flex-1">
-
-              <h3 className="text-4xl font-bold mb-4">
-                Vellore Institute of Technology
-              </h3>
-
-              <p className="text-xl text-sky-300 mb-4">
-                M.Tech Integrated Software Engineering
-              </p>
-
-              <p className="text-gray-300 leading-8 text-lg">
-                Focused on Full Stack Development,
-                Backend Engineering, Cloud Computing,
-                Artificial Intelligence, Machine Learning.
-              </p>
-
-              {/* INFO TAGS */}
-
-              <div className="flex flex-wrap gap-4 mt-8">
-
-                <span
-                  className="
-                  px-5 py-2
-                  rounded-full
+              {/* ICON */}
+              <div
+                className="
+                  text-6xl
+                  text-sky-400
                   bg-sky-500/10
-                  border border-sky-400/20
-                  text-sky-300
-                  "
-                >
-                  CGPA : 8.13
-                </span>
+                  p-6
+                  rounded-2xl
+                  border
+                  border-sky-400/20
+                "
+              >
+                <FaGraduationCap />
+              </div>
 
-                <span
-                  className="
-                  px-5 py-2
-                  rounded-full
-                  bg-purple-500/10
-                  border border-purple-400/20
-                  text-purple-300
-                  "
-                >
-                  2022 - 2027
-                </span>
+              {/* DETAILS */}
+              <div className="flex-1">
+
+                <h3 className="text-4xl font-bold mb-4">
+                  Vellore Institute of Technology
+                </h3>
+
+                <p className="text-xl text-sky-300 mb-4">
+                  M.Tech Integrated Software Engineering
+                </p>
+
+                <p className="text-gray-300 leading-8 text-lg">
+                  Focused on Full Stack Development,
+                  Backend Engineering, Cloud Computing,
+                  Artificial Intelligence, Machine Learning.
+                </p>
+
+                {/* INFO TAGS */}
+                <div className="flex flex-wrap gap-4 mt-8">
+
+                  <span
+                    className="
+                      px-5
+                      py-2
+                      rounded-full
+                      bg-sky-500/10
+                      border
+                      border-sky-400/20
+                      text-sky-300
+                    "
+                  >
+                    CGPA : 8.13
+                  </span>
+
+                  <span
+                    className="
+                      px-5
+                      py-2
+                      rounded-full
+                      bg-purple-500/10
+                      border
+                      border-purple-400/20
+                      text-purple-300
+                    "
+                  >
+                    2022 - 2027
+                  </span>
+
+                </div>
 
               </div>
 

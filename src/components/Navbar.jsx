@@ -1,3 +1,5 @@
+import ThemeToggle from "./ThemeToggle";
+
 function Navbar() {
 
   return (
@@ -10,51 +12,57 @@ function Navbar() {
           Dhanush
         </h1>
 
-        <ul className="hidden md:flex gap-10 text-lg font-medium">
+        <div className="flex items-center gap-8">
 
-          <li>
-            <a href="#about" className="hover:text-sky-400 transition">
-              About
-            </a>
-          </li>
+          <ul className="hidden md:flex gap-10 text-lg font-medium">
 
-          <li>
-            <a href="#skills" className="hover:text-sky-400 transition">
-              Skills
-            </a>
-          </li>
+            <li>
+              <a href="#about" className="hover:text-sky-400 transition">
+                About
+              </a>
+            </li>
 
-          <li>
-            <a href="#experience" className="hover:text-sky-400 transition">
-              Experience
-            </a>
-          </li>
+            <li>
+              <a href="#skills" className="hover:text-sky-400 transition">
+                Skills
+              </a>
+            </li>
 
-          <li>
-            <a href="#projects" className="hover:text-sky-400 transition">
-              Projects
-            </a>
-          </li>
+            <li>
+              <a href="#experience" className="hover:text-sky-400 transition">
+                Experience
+              </a>
+            </li>
 
-          <li>
-            <a href="#certifications" className="hover:text-sky-400 transition">
-              Certifications
-            </a>
-          </li>
+            <li>
+              <a href="#projects" className="hover:text-sky-400 transition">
+                Projects
+              </a>
+            </li>
 
-          <li>
-            <a href="#education" className="hover:text-sky-400 transition">
-              Education
-            </a>
-          </li>
+            <li>
+              <a href="#certifications" className="hover:text-sky-400 transition">
+                Certifications
+              </a>
+            </li>
 
-          <li>
-            <a href="#contact" className="hover:text-sky-400 transition">
-              Contact
-            </a>
-          </li>
+            <li>
+              <a href="#education" className="hover:text-sky-400 transition">
+                Education
+              </a>
+            </li>
 
-        </ul>
+            <li>
+              <a href="#contact" className="hover:text-sky-400 transition">
+                Contact
+              </a>
+            </li>
+
+          </ul>
+
+          <ThemeToggle />
+
+        </div>
 
       </div>
 

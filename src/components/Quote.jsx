@@ -1,29 +1,35 @@
+import MeteorField from "./MeteorField";
+
 function Quote() {
-return ( <section
-   className="py-24 px-6"
-   data-aos="fade-up"
- > <div className="max-w-5xl mx-auto text-center">
+  return (
+    <section
+      id="quote"
+      className="relative py-32 px-6 overflow-hidden"
+      data-aos="fade-up"
+    >
 
+      {/* Falling Stars / Meteors */}
+      <MeteorField
+        meteorCount={12}
+        starCount={40}
+      />
 
-    <div className="text-7xl text-sky-400 mb-6">
-      
-    </div>
+      {/* Quote Content */}
+      <div className="relative z-10 max-w-5xl mx-auto text-center">
 
-    <h2 className="text-4xl md:text-5xl font-bold leading-relaxed text-white">
+        <p className="text-3xl md:text-5xl font-semibold leading-relaxed text-gray-200">
+          "Turning ideas into solutions through technology,
+          innovation, and continuous learning."
+        </p>
 
-      "Turning ideas into solutions through technology,
-innovation, and continuous learning."
-    </h2>
+        <p className="mt-8 text-xl md:text-2xl font-semibold gradient-text">
+          — DHANUSH S J
+        </p>
 
-    <p className="mt-10 text-gray-400 text-xl tracking-[0.3em]">
-      — DHANUSH S J
-    </p>
+      </div>
 
-  </div>
-</section>
-
-
-);
+    </section>
+  );
 }
 
 export default Quote;
