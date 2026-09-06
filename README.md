@@ -1,16 +1,118 @@
-# React + Vite
+# Dhanush S J — Personal Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern, responsive personal portfolio website showcasing my skills, projects, experience, education, certifications, and contact information.
 
-Currently, two official plugins are available:
+Built with **React, Vite, and Tailwind CSS**, with a focus on clean UI, responsive design, smooth interactions, and a professional developer experience.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+---
 
-## React Compiler
+## 🌐 Live Portfolio
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+🔗 **Portfolio:** [https://dhanushsjportfolio.vercel.app/]
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 👨‍💻 About Me
+
+Hi, I'm **Dhanush S J**, an M.Tech student and aspiring software/AI engineer with an interest in:
+
+- Artificial Intelligence & Machine Learning
+- Generative AI & LLM Applications
+- Cloud Computing
+- Full-Stack Development
+- Cybersecurity
+- Explainable AI
+- Intelligent Automation
+
+I enjoy building practical applications that combine software engineering, AI, cloud technologies, and real-world problem solving.
+
+---
+
+## 🚀 Features
+
+- Modern responsive portfolio design
+- Dark and light theme support
+- Responsive navigation
+- Hero introduction section
+- About section
+- Technical skills section
+- Experience section
+- Project showcase
+- Certifications section
+- Education section
+- Contact section
+- GitHub project links
+- Smooth UI transitions and animations
+- Mobile-friendly layout
+
+---
+
+## 🛠️ Tech Stack
+
+### Frontend
+
+- React.js
+- Vite
+- JavaScript
+- Tailwind CSS
+- HTML5
+- CSS3
+
+### Icons & UI
+
+- React Icons
+- Tailwind CSS utilities
+- Responsive layouts
+- CSS transitions and animations
+
+### Development Tools
+
+- Visual Studio Code
+- Git
+- GitHub
+- npm
+
+---
+
+## 📂 Project Structure
+
+```text
+portfolio/
+│
+├── public/
+│   └── projects/
+│       ├── 1.png
+│       ├── 2.png
+│       ├── 3.png
+│       └── ...
+│
+├── src/
+│   │
+│   ├── assets/
+│   │   ├── hero.png
+│   │   └── profile.jpeg
+│   │
+│   ├── components/
+│   │   ├── Navbar.jsx
+│   │   ├── Hero.jsx
+│   │   ├── About.jsx
+│   │   ├── Skills.jsx
+│   │   ├── Experience.jsx
+│   │   ├── Projects.jsx
+│   │   ├── Certifications.jsx
+│   │   ├── Education.jsx
+│   │   ├── Contact.jsx
+│   │   ├── Quote.jsx
+│   │   └── Footer.jsx
+│   │
+│   ├── data/
+│   │   └── projects.js
+│   │
+│   ├── App.jsx
+│   ├── main.jsx
+│   └── index.css
+│
+├── package.json
+├── package-lock.json
+├── vite.config.js
+└── README.md
